@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ChopraKrishanExamPractice</string>
+    <string name="mangle_button">Mangle</string>
+    <string name="app_title">Name Mangler</string>
+    <string name="first_name">First Name</string>
+    <string name="toast_message">Some toast</string>
+</resources>
