@@ -4,4 +4,6 @@
     <string name="app_title">Name Mangler</string>
     <string name="first_name">First Name</string>
     <string name="toast_message">Some toast</string>
+    <string name="reset_button">Reset</string>
+    <string name="remangle_button">Re-mangle</string>
 </resources>

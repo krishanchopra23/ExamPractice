@@ -6,29 +6,32 @@
     android:gravity="center_horizontal"
     android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:textSize="30dp"
-        android:text="@string/app_title" />
 
     <TextView
+        android:id="@+id/first_name_mangle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/first_name"
         android:textSize="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="100dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/mangle_button_id"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mangle_button" />
+            android:id="@+id/reset_button_id"
+            android:text="@string/reset_button"/>
+
+        <Button
+            android:id="@+id/remangle_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remangle_button" />
 
     </LinearLayout>
 
