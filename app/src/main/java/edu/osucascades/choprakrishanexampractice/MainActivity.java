@@ -1,5 +1,6 @@
 package edu.osucascades.choprakrishanexampractice;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mMangleButton;
     private EditText mFirstNameInput;
+
+    private static final int REQUEST_CODE = 0;
+    private static final String KEY_INDEX = "index";
 
     private String[] lastNames = new String[] {
             "Smith",
@@ -40,13 +44,31 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Intent intent = new Intent(MainActivity.this, ManglerActivity.class);
                     intent.putExtra("FirstName", mFirstNameInput.getText().toString());
-                    startActivity(intent);
-                    //Random random = new Random();
-                    //int randomNumber = random.nextInt(4+1);
-                    //Toast.makeText(MainActivity.this, mFirstNameInput.getText() + " " + lastNames[randomNumber], Toast.LENGTH_SHORT).show();
+                    startActivityForResult(intent, REQUEST_CODE);
                 }
             }
         });
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        } else {
+            if (requestCode == REQUEST_CODE) {
+                if (data == null) {
+                    return;
+                }
+            }
+        }
+        mFirstNameInput.setText("");
+    }
+
+
 
 }
